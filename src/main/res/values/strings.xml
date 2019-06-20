@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_title">Stay Connected</string>
+    <string name="band_settings">Band Settings</string>
+    <string name="edit_profile">Edit Profile</string>
+</resources>
