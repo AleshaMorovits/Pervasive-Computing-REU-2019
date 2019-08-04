@@ -1,174 +1,221 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.alesha.percomsg.UserProfileData"
+    android:background="@color/colorBackground"
     android:orientation="vertical"
-    android:background="@color/colorBackground">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+    tools:context="com.example.alesha.percomsg.UserProfileData">
+
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            card_view:cardCornerRadius="5dp">
 
-            <EditText
-                android:id="@+id/field_fname"
-                android:layout_width="187dp"
-                android:layout_height="45dp"
-                android:hint="First Name" />
-
-            <EditText
-                android:id="@+id/field_lname"
-                android:layout_width="196dp"
-                android:layout_height="45dp"
-                android:layout_weight="1"
-                android:hint="Last Name" />
-        </LinearLayout>
-
-        <EditText
-            android:id="@+id/field_bio"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:hint="Tell us about yourself!" />
-    </LinearLayout>
-
-
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-    </LinearLayout>
-
-
-
-</LinearLayout>
-
-    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:layout_width="wrap_content"
-        android:layout_height="350dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="25dp"
-        card_view:cardCornerRadius="20dp">
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginBottom="0dp"
-            android:background="@color/colorPrimaryDark"
-            android:text="Edit Activities"
-            android:textColor="@color/colorForeground"
-            android:textAlignment="center"
-            android:textSize="32dp" />
-        </LinearLayout>
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:fillViewport="true">
 
             <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <CheckBox
-                    android:id="@+id/readBox"
-                    android:layout_width="300dp"
-                    android:layout_height="50dp"
-                    android:onClick="onCheckBoxClick"
-                    android:text="Read" />
 
-                <CheckBox
-                    android:id="@+id/hangoutBox"
-                    android:layout_width="300dp"
-                    android:layout_height="50dp"
-                    android:onClick="onCheckBoxClick"
-                    android:text="Hangout with friends" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center">
 
-                <CheckBox
-                    android:id="@+id/videogameBox"
-                    android:layout_width="300dp"
-                    android:layout_height="50dp"
-                    android:onClick="onCheckBoxClick"
-                    android:text="Play video games" />
+                    <EditText
+                        android:id="@+id/field_fname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="First Name"/>
 
-                <CheckBox
-                    android:id="@+id/workoutBox"
-                    android:layout_width="300dp"
-                    android:layout_height="50dp"
-                    android:onClick="onCheckBoxClick"
-                    android:text="Workout" />
+                    <EditText
+                        android:id="@+id/field_lname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Last Name"/>
 
-                <CheckBox
-                    android:id="@+id/sleepBox"
-                    android:layout_width="300dp"
-                    android:layout_height="50dp"
-                    android:onClick="onCheckBoxClick"
-                    android:text="Sleep" />
 
-                <CheckBox
-                    android:id="@+id/danceBox"
-                    android:layout_width="300dp"
-                    android:layout_height="50dp"
-                    android:onClick="onCheckBoxClick"
-                    android:text="Dance" />
+                </LinearLayout>
 
-                <CheckBox
-                    android:id="@+id/huntingBox"
-                    android:layout_width="300dp"
-                    android:layout_height="50dp"
-                    android:onClick="onCheckBoxClick"
-                    android:text="Hunting" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-                <CheckBox
-                    android:id="@+id/cookingBox"
-                    android:layout_width="300dp"
-                    android:layout_height="50dp"
-                    android:onClick="onCheckBoxClick"
-                    android:text="Cooking" />
+                    <Button
+                        android:id="@+id/btnSelectProfilePic"
+                        android:layout_width="246dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Select Profile Picture" />
 
-                <CheckBox
-                    android:id="@+id/musicBox"
-                    android:layout_width="300dp"
-                    android:layout_height="50dp"
-                    android:onClick="onCheckBoxClick"
-                    android:text="Listen to music" />
+
+                    <ImageView
+                        android:id="@+id/viewProfilePic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_launcher" />
+
+                </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/btnUpdateLocation"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Set Location" />
+                <TextView
+                    android:id="@+id/locationTv"
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current Location"/>
             </LinearLayout>
 
-        </ScrollView>
-</LinearLayout>
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
+                <EditText
+                    android:id="@+id/field_bio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Tell us about yourself!" />
 
-    <Button
-        android:id="@+id/saveBtn"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:text="Save"
-        android:layout_gravity="center"/>
 
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="300dp"
+            android:layout_height="350dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="2dp"
+            card_view:cardCornerRadius="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="0dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:text="Edit Activities"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorForeground"
+                        android:textSize="25dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fillViewport="true">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:id="@+id/readBox"
+                                android:layout_width="300dp"
+                                android:layout_height="50dp"
+                                android:onClick="onCheckBoxClick"
+                                android:text="Read" />
+
+                            <CheckBox
+                                android:id="@+id/hangoutBox"
+                                android:layout_width="300dp"
+                                android:layout_height="50dp"
+                                android:onClick="onCheckBoxClick"
+                                android:text="Hangout with friends" />
+
+                            <CheckBox
+                                android:id="@+id/videogameBox"
+                                android:layout_width="300dp"
+                                android:layout_height="50dp"
+                                android:onClick="onCheckBoxClick"
+                                android:text="Play video games" />
+
+                            <CheckBox
+                                android:id="@+id/workoutBox"
+                                android:layout_width="300dp"
+                                android:layout_height="50dp"
+                                android:onClick="onCheckBoxClick"
+                                android:text="Workout" />
+
+                            <CheckBox
+                                android:id="@+id/sleepBox"
+                                android:layout_width="300dp"
+                                android:layout_height="50dp"
+                                android:onClick="onCheckBoxClick"
+                                android:text="Sleep" />
+
+                            <CheckBox
+                                android:id="@+id/danceBox"
+                                android:layout_width="300dp"
+                                android:layout_height="50dp"
+                                android:onClick="onCheckBoxClick"
+                                android:text="Dance" />
+
+                            <CheckBox
+                                android:id="@+id/huntingBox"
+                                android:layout_width="300dp"
+                                android:layout_height="50dp"
+                                android:onClick="onCheckBoxClick"
+                                android:text="Hunting" />
+
+                            <CheckBox
+                                android:id="@+id/cookingBox"
+                                android:layout_width="300dp"
+                                android:layout_height="50dp"
+                                android:onClick="onCheckBoxClick"
+                                android:text="Cooking" />
+
+                            <CheckBox
+                                android:id="@+id/musicBox"
+                                android:layout_width="300dp"
+                                android:layout_height="50dp"
+                                android:onClick="onCheckBoxClick"
+                                android:text="Listen to music" />
+                        </LinearLayout>
+
+                    </ScrollView>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="1dp"
+            android:text="Save" />
+    </LinearLayout>
 </LinearLayout>

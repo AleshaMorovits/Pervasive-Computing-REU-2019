@@ -12,14 +12,14 @@ import java.util.ArrayList;
 
 public class UserData {
 
-    private int size = 0;
-    Uri uri;
     private String first_name, last_name, bio;
     private ArrayList<String> hobbyArr;
-public UserData(){
+
+    public UserData() {
 
     }
-    public UserData(String fn, String ln, String b, ArrayList<String> arr ) {
+
+    public UserData(String fn, String ln, String b, ArrayList<String> arr) {
         bio = b;
         first_name = fn;
         last_name = ln;
@@ -41,6 +41,8 @@ public UserData(){
     public String getLast_name() {
         return last_name;
     }
+
+
 
 }
 

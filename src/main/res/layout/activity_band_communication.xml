@@ -1,126 +1,264 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <android.support.v7.widget.CardView
-        android:layout_width="325dp"
-        android:layout_height="542dp"
+
+    <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="355dp"
+        android:layout_height="450dp"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="25dp"
-        app:cardCornerRadius="25dp">
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="0dp"
+        card_view:cardCornerRadius="20dp">
+
+
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_height="fill_parent"
             android:orientation="vertical">
 
+
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="0dp"
-                android:background="@color/colorPrimaryDark"
-                android:text="Band Settings"
-                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:text="Record Gestures"
+                android:paddingTop="0dp"
                 android:textColor="@color/colorForeground"
-                android:textSize="32dp" />
+                android:background="@color/colorPrimaryDark"
+                android:textAlignment="center"
+                android:textSize="20dp"/>
 
-            <TextView
-                android:id="@+id/txtHeartRate"
-                android:layout_width="match_parent"
-                android:layout_height="118dp"
-                android:layout_weight="1"
-                android:text="Heart Rate" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox
+                    android:id="@+id/highwaveBox"
+                    android:layout_width="227dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="onCheckBoxClick"
+                    android:text="Do a high wave five times." />
+                <Button
+                    android:id="@+id/highwaveStartBtn"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Start"/>
+                <Button
+                    android:id="@+id/highwaveStopBtn"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Stop"/>
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/txtAccel"
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:layout_weight="1"
-                android:text="Accelerometer" />
 
-            <TextView
-                android:id="@+id/txtBandSettings"
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:layout_weight="1"
-                android:text="Band Settings:" />
 
-            <TextView
-                android:id="@+id/txtGesture"
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:layout_weight="1"
-                android:text="Gesture:" />
 
-            <TextView
-                android:id="@+id/txtChain"
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:layout_weight="1"
-                android:text="Chain:" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/fistpumpBox"
+                    android:layout_width="227dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="onCheckBoxClick"
+                    android:text="Do a fist pump five times." />
+                <Button
+                    android:id="@+id/fistpumpStartBtn"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Start"/>
+                <Button
+                    android:id="@+id/fistpumpStopBtn"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Stop"/>
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox
+                    android:id="@+id/shakehandBox"
+                    android:layout_width="227dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="onCheckBoxClick"
+                    android:text="Shake hands five times." />
+                <Button
+                    android:id="@+id/shakehandStartBtn"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Start"/>
+                <Button
+                    android:id="@+id/shakehandStopBtn"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Stop"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox
+                    android:id="@+id/lowwaveBox"
+                    android:layout_width="227dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:onClick="onCheckBoxClick"
+                    android:text="Do a low wave five times." />
+                <Button
+                    android:id="@+id/lowwaveStartBtn"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Start"/>
+                <Button
+                    android:id="@+id/lowwaveStopBtn"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Stop"/>
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox
+                    android:id="@+id/highfiveBox"
+                    android:layout_width="227dp"
+                    android:layout_height="50dp"
+                    android:onClick="onCheckBoxClick"
+                    android:layout_weight="1"
+                    android:text="Do a high-five five times." />
+                <Button
+                    android:id="@+id/highfiveStartBtn"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Start"/>
+                <Button
+                    android:id="@+id/highfiveStopBtn"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Stop"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/claphandsBox"
+                    android:layout_width="227dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:onClick="onCheckBoxClick"
+                    android:text="Clap hands five times." />
+                <Button
+                    android:id="@+id/claphandsStartBtn"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Start"/>
+                <Button
+                    android:id="@+id/claphandsStopBtn"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Stop"/>
+            </LinearLayout>
+
+
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/btnGetConsent"
-                    android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/txtHeartRate"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    android:text="Get Consent" />
+                    android:text="Heart Rate" />
 
-                <Button
-                    android:id="@+id/btnStartReport"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/txtAccel"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal
-"
-                    android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    android:text="Start Report" />
-            </LinearLayout>
+                    android:text="Accelerometer" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <ToggleButton
-                    android:id="@+id/tbtnModel"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/txtGesture"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    android:textOff="Generate Model"
-                    android:textOn="Model Generated"/>
-
-                <ToggleButton
-                    android:id="@+id/tbtnDetect"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="10dp"
-                    android:layout_weight="1"
-                    android:textOff="Start Detection"
-                    android:textOn="Detecting Gestures"/>
-            </LinearLayout>
+                    android:text="Gesture:" />
+          </LinearLayout>
         </LinearLayout>
-    </android.support.v7.widget.CardView>
 
+    </androidx.cardview.widget.CardView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:orientation="horizontal">
+    <Button
+        android:id="@+id/btnStartReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal
+"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:text="Start Report" />
+
+    <ToggleButton
+        android:id="@+id/tbtnModel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:textOff="Generate Model"
+        android:textOn="Model Generated" />
+
+    <ToggleButton
+        android:id="@+id/tbtnDetect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:textOff="Start Detection"
+        android:textOn="Detecting Gestures" />
+    </LinearLayout>
 </LinearLayout>
